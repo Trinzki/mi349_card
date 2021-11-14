@@ -6,7 +6,7 @@ body{
 }
 
 img{
-    width: 100%;
+    width: 100%;                    /* scale with browser */
 }
 
 h1{
@@ -24,11 +24,12 @@ h2{
     margin: 0 auto;                 /* When used with width, centers items on page */
     width: 400px;
     text-align: center;             /* Helps to align both text and images */
-    box-shadow: rgba(0, 0, 0, 0.1) 0 0 20px;            /* 0 on Red, Green and Blue to have black color, 0.1 for transparency (light), x offset, y offset, and blur(how spread out is the shadow)= 20px */
-    border: 2px solid #aaa;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 10px 10px;            /* 0 on Red, Green and Blue to have black color, 0.1 for transparency (light), x offset, y offset, and blur(how spread out is the shadow)= 20px */
+    border: 1px solid #aaa;
 }
 
 .card .avatar{
+    box-shadow: rgba(0, 0, 0, 0.1) 0 10px 10px;
     width: 100px;
     border-radius: 50%;             /* Makes square a circle */
     margin-top: -50px;
@@ -43,5 +44,10 @@ h2{
 .contacts li{
     width: 30px;
     display: inline-block;          /* Puts list items in a horizontal line instead of vertical */
-    padding: 20px 10px;             /* Top and bottom has a cusion of 20px and left and right has a cusion of 10px */
+    padding: 20px 10px;             /* Top and bottom has a cusion of 20px and left and right has a cusion of 10px */   
+}
+
+.contacts li a img:hover{           /* class, list item, a = a tag = link, img : pseudoclass*/
+    opacity: 0.5;
+    transition: opacity ease-in-out 0.2s;
 }
